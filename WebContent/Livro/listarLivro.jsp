@@ -20,6 +20,17 @@
     	  for(int num = 0; num < lista.size(); num ++) {
     		  out.print("Código: " + lista.get(num).getId_livro() + "<br>");
     		  out.print("Nome: " + lista.get(num).getNome_livro() + "<br>");
+    		  
+    		  out.print("<a href='frmExcluirLivroView.jsp?id=" 
+    		  + lista.get(num).getId_livro() + "&nome="
+    		  + lista.get(num).getNome_livro() + "'> Excluir </a>" + "<br>");  
+    		  
+    		  
+    		  out.print("<a href='frmAlterarLivroView.jsp?id=" 
+    	    		  + lista.get(num).getId_livro() + "&nome="
+    	    		  + lista.get(num).getNome_livro() + "'> Alterar </a>");
+    		  
+    		  %> <br><br> <%
     	  }
     	  
       } catch(Exception e) {
